@@ -1,0 +1,910 @@
+fileFormatVersion: 2
+guid: fc5cb02711464294e99e642c912642fe
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7471936201871271854
+    second: art-deco-game-interface-button-ui-animation-frame_0
+  - first:
+      213: 5737630583641780861
+    second: art-deco-game-interface-button-ui-animation-frame_1
+  - first:
+      213: 2049314889599568366
+    second: art-deco-game-interface-button-ui-animation-frame_2
+  - first:
+      213: 6430153823978243166
+    second: art-deco-game-interface-button-ui-animation-frame_3
+  - first:
+      213: -7405512265153869176
+    second: art-deco-game-interface-button-ui-animation-frame_4
+  - first:
+      213: -7074320873672319749
+    second: art-deco-game-interface-button-ui-animation-frame_5
+  - first:
+      213: 1754142472164321665
+    second: art-deco-game-interface-button-ui-animation-frame_6
+  - first:
+      213: 8356184565837262460
+    second: art-deco-game-interface-button-ui-animation-frame_7
+  - first:
+      213: 9003915869089503020
+    second: art-deco-game-interface-button-ui-animation-frame_8
+  - first:
+      213: -206166830965201867
+    second: art-deco-game-interface-button-ui-animation-frame_9
+  - first:
+      213: 7127174781923205472
+    second: art-deco-game-interface-button-ui-animation-frame_10
+  - first:
+      213: 1335744167210088875
+    second: art-deco-game-interface-button-ui-animation-frame_11
+  - first:
+      213: -8693611112428786800
+    second: art-deco-game-interface-button-ui-animation-frame_12
+  - first:
+      213: -288820630425395956
+    second: art-deco-game-interface-button-ui-animation-frame_13
+  - first:
+      213: 5182259477890983219
+    second: art-deco-game-interface-button-ui-animation-frame_14
+  - first:
+      213: 653953182905090652
+    second: art-deco-game-interface-button-ui-animation-frame_15
+  - first:
+      213: 5371020625614578101
+    second: art-deco-game-interface-button-ui-animation-frame_16
+  - first:
+      213: 3668204755979007303
+    second: art-deco-game-interface-button-ui-animation-frame_17
+  - first:
+      213: -6602974536993082164
+    second: art-deco-game-interface-button-ui-animation-frame_18
+  - first:
+      213: 1294858128850863031
+    second: art-deco-game-interface-button-ui-animation-frame_19
+  - first:
+      213: -7751380208074746603
+    second: art-deco-game-interface-button-ui-animation-frame_20
+  - first:
+      213: 4843437255132459752
+    second: art-deco-game-interface-button-ui-animation-frame_21
+  - first:
+      213: 5346726197815916521
+    second: art-deco-game-interface-button-ui-animation-frame_22
+  - first:
+      213: -161955354989386447
+    second: art-deco-game-interface-button-ui-animation-frame_23
+  - first:
+      213: 5369780127759152574
+    second: art-deco-game-interface-button-ui-animation-frame_24
+  - first:
+      213: -6319239104411028016
+    second: art-deco-game-interface-button-ui-animation-frame_25
+  - first:
+      213: -8783751241879038704
+    second: art-deco-game-interface-button-ui-animation-frame_26
+  - first:
+      213: 7269781050785120723
+    second: art-deco-game-interface-button-ui-animation-frame_27
+  - first:
+      213: -5917596926651727261
+    second: art-deco-game-interface-button-ui-animation-frame_28
+  - first:
+      213: 44386521004085101
+    second: art-deco-game-interface-button-ui-animation-frame_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: art-deco-game-interface-button-ui-animation-frame_0
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 690
+        width: 320
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 258d417cc995e4890800000000000000
+      internalID: -7471936201871271854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: art-deco-game-interface-button-ui-animation-frame_1
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 690
+        width: 320
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d72b266dd9820af40800000000000000
+      internalID: 5737630583641780861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: art-deco-game-interface-button-ui-animation-frame_2
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 690
+        width: 320
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee9408bc801a07c10800000000000000
+      internalID: 2049314889599568366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: art-deco-game-interface-button-ui-animation-frame_3
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 690
+        width: 320
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e54c751a5de7c3950800000000000000
+      internalID: 6430153823978243166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: art-deco-game-interface-button-ui-animation-frame_4
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 690
+        width: 320
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88a84b7b4d55a3990800000000000000
+      internalID: -7405512265153869176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: art-deco-game-interface-button-ui-animation-frame_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 576
+        width: 320
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfc51a195a6f2dd90800000000000000
+      internalID: -7074320873672319749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: art-deco-game-interface-button-ui-animation-frame_6
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 576
+        width: 320
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 189a7cad847f75810800000000000000
+      internalID: 1754142472164321665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: art-deco-game-interface-button-ui-animation-frame_7
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 576
+        width: 320
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7ee454f69127f370800000000000000
+      internalID: 8356184565837262460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: art-deco-game-interface-button-ui-animation-frame_8
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 576
+        width: 320
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c27159437c554fc70800000000000000
+      internalID: 9003915869089503020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: art-deco-game-interface-button-ui-animation-frame_9
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 576
+        width: 320
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 534e9db0c5c832df0800000000000000
+      internalID: -206166830965201867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: art-deco-game-interface-button-ui-animation-frame_10
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 462
+        width: 320
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 061a7a8e3bfc8e260800000000000000
+      internalID: 7127174781923205472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: art-deco-game-interface-button-ui-animation-frame_11
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 462
+        width: 320
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba97b553e34898210800000000000000
+      internalID: 1335744167210088875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: art-deco-game-interface-button-ui-animation-frame_12
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 462
+        width: 320
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09b2b4401c61a5780800000000000000
+      internalID: -8693611112428786800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: art-deco-game-interface-button-ui-animation-frame_13
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 462
+        width: 320
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0d90b7ba27edfbf0800000000000000
+      internalID: -288820630425395956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: art-deco-game-interface-button-ui-animation-frame_14
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 462
+        width: 320
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 335e791d9851be740800000000000000
+      internalID: 5182259477890983219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: art-deco-game-interface-button-ui-animation-frame_15
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 287
+        width: 320
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c524bce74fe431900800000000000000
+      internalID: 653953182905090652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: art-deco-game-interface-button-ui-animation-frame_16
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 287
+        width: 320
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b1ad075dc2b98a40800000000000000
+      internalID: 5371020625614578101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: art-deco-game-interface-button-ui-animation-frame_17
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 287
+        width: 320
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 745f6836ac418e230800000000000000
+      internalID: 3668204755979007303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: art-deco-game-interface-button-ui-animation-frame_18
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 287
+        width: 320
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc4f39584a58d54a0800000000000000
+      internalID: -6602974536993082164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: art-deco-game-interface-button-ui-animation-frame_19
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 287
+        width: 320
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b3cea49b9248f110800000000000000
+      internalID: 1294858128850863031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: art-deco-game-interface-button-ui-animation-frame_20
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 172
+        width: 320
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51516b2f4c09d6490800000000000000
+      internalID: -7751380208074746603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: art-deco-game-interface-button-ui-animation-frame_21
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 173
+        width: 320
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e2301c9588573340800000000000000
+      internalID: 4843437255132459752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: art-deco-game-interface-button-ui-animation-frame_22
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 173
+        width: 320
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e7b7141623633a40800000000000000
+      internalID: 5346726197815916521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: art-deco-game-interface-button-ui-animation-frame_23
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 173
+        width: 320
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 135a264767e90cdf0800000000000000
+      internalID: -161955354989386447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: art-deco-game-interface-button-ui-animation-frame_24
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 173
+        width: 320
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb5390d639a458a40800000000000000
+      internalID: 5369780127759152574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: art-deco-game-interface-button-ui-animation-frame_25
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 59
+        width: 320
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d5b2dae38d8d48a0800000000000000
+      internalID: -6319239104411028016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: art-deco-game-interface-button-ui-animation-frame_26
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 58
+        width: 320
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0155768a8c8d91680800000000000000
+      internalID: -8783751241879038704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: art-deco-game-interface-button-ui-animation-frame_27
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 59
+        width: 320
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d1c9e6495373e460800000000000000
+      internalID: 7269781050785120723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: art-deco-game-interface-button-ui-animation-frame_28
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 58
+        width: 320
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3620bfea2f870eda0800000000000000
+      internalID: -5917596926651727261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: art-deco-game-interface-button-ui-animation-frame_29
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 59
+        width: 320
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6f83414e41bd9000800000000000000
+      internalID: 44386521004085101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      art-deco-game-interface-button-ui-animation-frame_0: -7471936201871271854
+      art-deco-game-interface-button-ui-animation-frame_1: 5737630583641780861
+      art-deco-game-interface-button-ui-animation-frame_10: 7127174781923205472
+      art-deco-game-interface-button-ui-animation-frame_11: 1335744167210088875
+      art-deco-game-interface-button-ui-animation-frame_12: -8693611112428786800
+      art-deco-game-interface-button-ui-animation-frame_13: -288820630425395956
+      art-deco-game-interface-button-ui-animation-frame_14: 5182259477890983219
+      art-deco-game-interface-button-ui-animation-frame_15: 653953182905090652
+      art-deco-game-interface-button-ui-animation-frame_16: 5371020625614578101
+      art-deco-game-interface-button-ui-animation-frame_17: 3668204755979007303
+      art-deco-game-interface-button-ui-animation-frame_18: -6602974536993082164
+      art-deco-game-interface-button-ui-animation-frame_19: 1294858128850863031
+      art-deco-game-interface-button-ui-animation-frame_2: 2049314889599568366
+      art-deco-game-interface-button-ui-animation-frame_20: -7751380208074746603
+      art-deco-game-interface-button-ui-animation-frame_21: 4843437255132459752
+      art-deco-game-interface-button-ui-animation-frame_22: 5346726197815916521
+      art-deco-game-interface-button-ui-animation-frame_23: -161955354989386447
+      art-deco-game-interface-button-ui-animation-frame_24: 5369780127759152574
+      art-deco-game-interface-button-ui-animation-frame_25: -6319239104411028016
+      art-deco-game-interface-button-ui-animation-frame_26: -8783751241879038704
+      art-deco-game-interface-button-ui-animation-frame_27: 7269781050785120723
+      art-deco-game-interface-button-ui-animation-frame_28: -5917596926651727261
+      art-deco-game-interface-button-ui-animation-frame_29: 44386521004085101
+      art-deco-game-interface-button-ui-animation-frame_3: 6430153823978243166
+      art-deco-game-interface-button-ui-animation-frame_4: -7405512265153869176
+      art-deco-game-interface-button-ui-animation-frame_5: -7074320873672319749
+      art-deco-game-interface-button-ui-animation-frame_6: 1754142472164321665
+      art-deco-game-interface-button-ui-animation-frame_7: 8356184565837262460
+      art-deco-game-interface-button-ui-animation-frame_8: 9003915869089503020
+      art-deco-game-interface-button-ui-animation-frame_9: -206166830965201867
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

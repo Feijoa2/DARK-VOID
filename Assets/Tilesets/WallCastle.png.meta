@@ -1,0 +1,832 @@
+fileFormatVersion: 2
+guid: a7e44da9bec5280449c01e40409da154
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4188036394522877775
+    second: WallCastle_0
+  - first:
+      213: -7651896377777628001
+    second: WallCastle_1
+  - first:
+      213: 4823266465396513232
+    second: WallCastle_2
+  - first:
+      213: -1794118263552439994
+    second: WallCastle_3
+  - first:
+      213: -235328039439335174
+    second: WallCastle_4
+  - first:
+      213: -5736184812779279415
+    second: WallCastle_5
+  - first:
+      213: 2486185766236539932
+    second: WallCastle_6
+  - first:
+      213: -202612667762634446
+    second: WallCastle_7
+  - first:
+      213: -6109740309818277619
+    second: WallCastle_8
+  - first:
+      213: 7569997101298005493
+    second: WallCastle_9
+  - first:
+      213: 1473667664057456948
+    second: WallCastle_10
+  - first:
+      213: -3350852753501954895
+    second: WallCastle_11
+  - first:
+      213: 3546976783330919801
+    second: WallCastle_12
+  - first:
+      213: 5118048431228302144
+    second: WallCastle_13
+  - first:
+      213: -7904654842806322653
+    second: WallCastle_14
+  - first:
+      213: 4343602388426590890
+    second: WallCastle_15
+  - first:
+      213: -1931280880582477671
+    second: WallCastle_16
+  - first:
+      213: -2995234449771565313
+    second: WallCastle_17
+  - first:
+      213: 5686156934593187909
+    second: WallCastle_18
+  - first:
+      213: 2811143533605282169
+    second: WallCastle_19
+  - first:
+      213: -8652191828900869620
+    second: WallCastle_20
+  - first:
+      213: -8517953928872797169
+    second: WallCastle_21
+  - first:
+      213: -3599643280689632099
+    second: WallCastle_22
+  - first:
+      213: 1507011574543741166
+    second: WallCastle_23
+  - first:
+      213: 5478940040207793478
+    second: WallCastle_24
+  - first:
+      213: -6856582474555321169
+    second: WallCastle_25
+  - first:
+      213: 5585769753285532929
+    second: WallCastle_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WallCastle_0
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 293
+        width: 206
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4f91f169e4ee1a30800000000000000
+      internalID: 4188036394522877775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallCastle_1
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 307
+        width: 82
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9c577039c00fc590800000000000000
+      internalID: -7651896377777628001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallCastle_2
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 307
+        width: 66
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d95307ab4fafe240800000000000000
+      internalID: 4823266465396513232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallCastle_3
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 282
+        width: 85
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6498ae7e1f20a17e0800000000000000
+      internalID: -1794118263552439994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallCastle_4
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 307
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af0878b1562fbbcf0800000000000000
+      internalID: -235328039439335174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallCastle_5
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 243
+        width: 66
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cbec4ced4af460b0800000000000000
+      internalID: -5736184812779279415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallCastle_6
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 243
+        width: 66
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1c492238c4b08220800000000000000
+      internalID: 2486185766236539932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallCastle_7
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 242
+        width: 162
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23193072adc203df0800000000000000
+      internalID: -202612667762634446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallCastle_8
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 243
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d01856b1f87d53ba0800000000000000
+      internalID: -6109740309818277619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallCastle_9
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 243
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f5ba9d81480e0960800000000000000
+      internalID: 7569997101298005493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallCastle_10
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 243
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 439df11cee4837410800000000000000
+      internalID: 1473667664057456948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallCastle_11
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 222
+        width: 76
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bc50ec9c216f71d0800000000000000
+      internalID: -3350852753501954895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallCastle_12
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 243
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9754ffc7794693130800000000000000
+      internalID: 3546976783330919801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallCastle_13
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 154
+        width: 24
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 043bb9e7ee5f60740800000000000000
+      internalID: 5118048431228302144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallCastle_14
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 149
+        width: 206
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32a35761d460d4290800000000000000
+      internalID: -7904654842806322653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallCastle_15
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 154
+        width: 24
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaa84bfdb53974c30800000000000000
+      internalID: 4343602388426590890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallCastle_16
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 179
+        width: 66
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 998b06f7546b235e0800000000000000
+      internalID: -1931280880582477671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallCastle_17
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 179
+        width: 66
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffe6a5a232ace66d0800000000000000
+      internalID: -2995234449771565313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallCastle_18
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 195
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5401d8ffa9949ee40800000000000000
+      internalID: 5686156934593187909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallCastle_19
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 195
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 971ed255620330720800000000000000
+      internalID: 2811143533605282169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallCastle_20
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 195
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0a83d57f5d3de780800000000000000
+      internalID: -8652191828900869620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallCastle_21
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 69
+        width: 206
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0cd46028062ac980800000000000000
+      internalID: -8517953928872797169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallCastle_22
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 115
+        width: 66
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9c6f58028f7b0ec0800000000000000
+      internalID: -3599643280689632099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallCastle_23
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 115
+        width: 66
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee0f415ea0bf9e410800000000000000
+      internalID: 1507011574543741166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallCastle_24
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 115
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64dff3a10fa190c40800000000000000
+      internalID: 5478940040207793478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallCastle_25
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 19
+        width: 66
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa416fe219688d0a0800000000000000
+      internalID: -6856582474555321169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallCastle_26
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 19
+        width: 66
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10d94b5fef3a48d40800000000000000
+      internalID: 5585769753285532929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c81c750b0194e07468a000a2a2121bdb
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      WallCastle_0: 4188036394522877775
+      WallCastle_1: -7651896377777628001
+      WallCastle_10: 1473667664057456948
+      WallCastle_11: -3350852753501954895
+      WallCastle_12: 3546976783330919801
+      WallCastle_13: 5118048431228302144
+      WallCastle_14: -7904654842806322653
+      WallCastle_15: 4343602388426590890
+      WallCastle_16: -1931280880582477671
+      WallCastle_17: -2995234449771565313
+      WallCastle_18: 5686156934593187909
+      WallCastle_19: 2811143533605282169
+      WallCastle_2: 4823266465396513232
+      WallCastle_20: -8652191828900869620
+      WallCastle_21: -8517953928872797169
+      WallCastle_22: -3599643280689632099
+      WallCastle_23: 1507011574543741166
+      WallCastle_24: 5478940040207793478
+      WallCastle_25: -6856582474555321169
+      WallCastle_26: 5585769753285532929
+      WallCastle_3: -1794118263552439994
+      WallCastle_4: -235328039439335174
+      WallCastle_5: -5736184812779279415
+      WallCastle_6: 2486185766236539932
+      WallCastle_7: -202612667762634446
+      WallCastle_8: -6109740309818277619
+      WallCastle_9: 7569997101298005493
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
