@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenScript : MonoBehaviour
+public class MenuScript : MonoBehaviour
 {
     [Header("Панели")]
     public GameObject panelSettings;
