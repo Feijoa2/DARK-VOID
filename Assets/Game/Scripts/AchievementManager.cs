@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using YG;
 
 [System.Serializable]
 public class Achievement
@@ -23,29 +24,23 @@ public enum AchievementType
     FirstDeath
 }
 
+
+
 public class AchievementManager : MonoBehaviour
 {
     public static AchievementManager Instance;
 
-    [Header("Достижения")]
     [SerializeField] private List<Achievement> achievements = new List<Achievement>();
-
-    private const string AchievementsKey = "Achievements";
 
     void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
+        if (Instance == null) { Instance = this; DontDestroyOnLoad(gameObject); }
+        else { Destroy(gameObject); return; }
 
-        LoadAchievements();
+        // Инициализируем прогресс из облака, если его там нет
+        LoadAchievementsFromSaves();
+
+        UpdateAchievementsInSaves();
     }
 
     void OnEnable()
@@ -81,49 +76,63 @@ public class AchievementManager : MonoBehaviour
 
     private void UpdateProgress(AchievementType type, int amount)
     {
-        bool changed = false;
-
         foreach (var ach in achievements)
         {
             if (ach.type == type && !ach.isCompleted)
             {
                 ach.currentAmount += amount;
-                changed = true;
 
                 if (ach.currentAmount >= ach.targetAmount)
                 {
                     ach.isCompleted = true;
                     Debug.Log($"[AchievementManager] Достижение выполнено: {ach.title}");
+                    
+                    // Отправляем в Яндекс только при выполнении
+                    #if Leaderboards_yg
+                    YG2.SetLeaderboard(ach.id, ach.currentAmount);
+                    #endif
+                    
+                    // Сохраняем прогресс достижений в облако
+                    UpdateAchievementsInSaves();
+                    
+                    // И вызываем глобальное сохранение, так как это важное событие
+                    YG2.SaveProgress(); 
                 }
             }
         }
-
-        if (changed) SaveAchievements();
     }
-
-    private void SaveAchievements()
+    
+    private void UpdateAchievementsInSaves()
     {
-        var wrapper = new AchievementListWrapper { achievements = achievements };
-        PlayerPrefs.SetString(AchievementsKey, JsonUtility.ToJson(wrapper));
-        PlayerPrefs.Save();
-    }
-
-    private void LoadAchievements()
-    {
-        string json = PlayerPrefs.GetString(AchievementsKey, "");
-        if (!string.IsNullOrEmpty(json))
+        YG2.saves.achievementIds.Clear();
+        YG2.saves.achievementProgress.Clear();
+    
+        foreach (var ach in achievements)
         {
-            var wrapper = JsonUtility.FromJson<AchievementListWrapper>(json);
-            if (wrapper.achievements.Count == achievements.Count)
-                achievements = wrapper.achievements;
+            YG2.saves.achievementIds.Add(ach.id);
+            YG2.saves.achievementProgress.Add(ach.currentAmount);
         }
     }
+    
+    private void LoadAchievementsFromSaves()
+    {
+        for (int i = 0; i < YG2.saves.achievementIds.Count; i++)
+        {
+            string id = YG2.saves.achievementIds[i];
+            int progress = YG2.saves.achievementProgress[i];
+        
+            foreach (var ach in achievements)
+            {
+                if (ach.id == id)
+                {
+                    ach.currentAmount = progress;
+                    ach.isCompleted = ach.currentAmount >= ach.targetAmount;
+                    break;
+                }
+            }
+        }
+    }
+    
 
     public List<Achievement> GetAchievements() => achievements;
-
-    [System.Serializable]
-    private class AchievementListWrapper
-    {
-        public List<Achievement> achievements;
-    }
 }

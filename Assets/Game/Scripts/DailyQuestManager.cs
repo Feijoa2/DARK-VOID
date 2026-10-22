@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
+using YG;
 
 [System.Serializable]
 public class DailyQuest
@@ -44,7 +45,19 @@ public class DailyQuestManager : MonoBehaviour
             return;
         }
 
-        GenerateNewQuests();
+        string today = DateTime.Now.ToString("yyyy-MM-dd");
+        if (YG2.saves.lastQuestsDate != today)
+        {
+            GenerateNewQuests();
+            YG2.saves.lastQuestsDate = today;
+            YG2.SaveProgress();
+        }
+        else
+        {
+            // Загрузить activeQuests из сохранений (потребуется доработка сериализации списка)
+            // ИЛИ проще: хранить в SavesYG просто прогресс по типам квестов на сегодня, 
+            // а визуальные квесты генерировать всегда, но проверять прогресс через YG2.saves
+        }
     }
 
     void OnEnable()
@@ -80,7 +93,10 @@ public class DailyQuestManager : MonoBehaviour
                 changed = true;
 
                 if (quest.currentAmount >= quest.targetAmount)
+                {
                     quest.isCompleted = true;
+                    YG2.SaveProgress();
+                }
             }
         }
 

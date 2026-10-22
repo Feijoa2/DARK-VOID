@@ -1,30 +1,22 @@
 using UnityEngine;
+using YG;
 
 public class ProgressManager : MonoBehaviour
 {
     public static ProgressManager Instance;
-
-    // Счётчики
-    private int enemiesRepelled = 0;
-    private int enemiesKilled = 0;
-    private int levelsCompleted = 0;
-    private int coinsCollected = 0;
-    private int deathsCount = 0;
 
     void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // не уничтожать при смене сцены
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
             return;
         }
-
-        LoadProgress();
     }
 
     void OnEnable()
@@ -45,73 +37,34 @@ public class ProgressManager : MonoBehaviour
         GameEvents.OnCoinsCollected -= HandleCoinsCollected;
     }
 
-    // === Обработчики ===
-    private void HandleEnemyRepelled()
-    {
-        enemiesRepelled++;
-        SaveProgress();
-    }
-
-    private void HandleEnemyKilled()
-    {
-        enemiesKilled++;
-        SaveProgress();
-    }
-
-    private void HandlePlayerDied()
-    {
-        deathsCount++;
-        SaveProgress();
-    }
-
+    private void HandleEnemyRepelled() => YG2.saves.enemiesRepelled++;
+    private void HandleEnemyKilled() => YG2.saves.enemiesKilled++;
+    private void HandlePlayerDied() => YG2.saves.deathsCount++;
+    
     private void HandleLevelCompleted(int levelId)
     {
-        levelsCompleted++;
-        SaveProgress();
+        YG2.saves.levelsCompleted++;
+        YG2.SaveProgress(); 
     }
 
     private void HandleCoinsCollected(int amount)
     {
-        coinsCollected += amount;
-        SaveProgress();
+        YG2.saves.coinsCollected += amount;
     }
 
-    // === Сохранение / загрузка ===
-    private void SaveProgress()
-    {
-        PlayerPrefs.SetInt("EnemiesRepelled", enemiesRepelled);
-        PlayerPrefs.SetInt("EnemiesKilled", enemiesKilled);
-        PlayerPrefs.SetInt("LevelsCompleted", levelsCompleted);
-        PlayerPrefs.SetInt("CoinsCollected", coinsCollected);
-        PlayerPrefs.SetInt("DeathsCount", deathsCount);
-        PlayerPrefs.Save();
-    }
+    public int EnemiesRepelled => YG2.saves.enemiesRepelled;
+    public int EnemiesKilled => YG2.saves.enemiesKilled;
+    public int LevelsCompleted => YG2.saves.levelsCompleted;
+    public int CoinsCollected => YG2.saves.coinsCollected;
+    public int DeathsCount => YG2.saves.deathsCount;
 
-    private void LoadProgress()
-    {
-        enemiesRepelled = PlayerPrefs.GetInt("EnemiesRepelled", 0);
-        enemiesKilled = PlayerPrefs.GetInt("EnemiesKilled", 0);
-        levelsCompleted = PlayerPrefs.GetInt("LevelsCompleted", 0);
-        coinsCollected = PlayerPrefs.GetInt("CoinsCollected", 0);
-        deathsCount = PlayerPrefs.GetInt("DeathsCount", 0);
-    }
-
-    // === Геттеры ===
-    public int EnemiesRepelled => enemiesRepelled;
-    public int EnemiesKilled => enemiesKilled;
-    public int LevelsCompleted => levelsCompleted;
-    public int CoinsCollected => coinsCollected;
-    public int DeathsCount => deathsCount;
-
-    // === Сброс (для отладки) ===
     public void ResetProgress()
     {
-        PlayerPrefs.DeleteAll();
-        enemiesRepelled = 0;
-        enemiesKilled = 0;
-        levelsCompleted = 0;
-        coinsCollected = 0;
-        deathsCount = 0;
+        YG2.saves.enemiesRepelled = 0;
+        YG2.saves.enemiesKilled = 0;
+        YG2.saves.levelsCompleted = 0;
+        YG2.saves.coinsCollected = 0;
+        YG2.saves.deathsCount = 0;
+        YG2.SaveProgress(); // При сбросе сохраняем обязательно
     }
-
 }
