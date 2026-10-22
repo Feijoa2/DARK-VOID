@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 
 public class CurrencyUI : MonoBehaviour
 {
@@ -16,14 +17,13 @@ public class CurrencyUI : MonoBehaviour
     {
         if (coinsText != null)
         {
-            int coins = PlayerPrefs.GetInt("Coins", 0);
-            coinsText.text = $"Монеты: {coins}";
+            Debug.Log($"[CurrencyUI] Обновляем монеты: {YG2.saves.coinsCollected}");
+            coinsText.text = $"Монеты: {YG2.saves.coinsCollected}";
         }
 
         if (crystalsText != null)
         {
-            int crystals = PlayerPrefs.GetInt("Crystals", 0);
-            crystalsText.text = $"Кристаллы: {crystals}";
+            crystalsText.text = $"Кристаллы: {YG2.saves.crystalsCollected}";
         }
     }
 }

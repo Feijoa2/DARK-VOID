@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
+using System.Collections.Generic;
 
 public class AchievementRowUI : MonoBehaviour
 {
@@ -46,7 +48,9 @@ public class AchievementRowUI : MonoBehaviour
         if (currentAchievement == null) return;
 
         bool isCompleted = currentAchievement.currentAmount >= currentAchievement.targetAmount;
-        bool isClaimed = PlayerPrefs.GetInt($"Ach_{currentAchievement.id}_Claimed", 0) == 1;
+        
+        // ПРОВЕРКА ИЗ ОБЛАКА: забрана ли уже награда
+        bool isClaimed = YG2.saves.claimedAchievementIds.Contains(currentAchievement.id);
 
         if (isClaimed)
         {
@@ -79,14 +83,22 @@ public class AchievementRowUI : MonoBehaviour
         if (currentAchievement == null) return;
         if (currentAchievement.currentAmount < currentAchievement.targetAmount) return;
 
-        if (PlayerPrefs.GetInt($"Ach_{currentAchievement.id}_Claimed", 0) == 1) return;
+        if (YG2.saves.claimedAchievementIds.Contains(currentAchievement.id)) return;
 
-        int coins = PlayerPrefs.GetInt("Coins", 0);
-        PlayerPrefs.SetInt("Coins", coins + currentAchievement.rewardCoins);
-        PlayerPrefs.SetInt($"Ach_{currentAchievement.id}_Claimed", 1);
-        PlayerPrefs.Save();
+        // 1. Начисляем монеты в облако
+        YG2.saves.coinsCollected += currentAchievement.rewardCoins;
+        
+        // 2. Помечаем как забранное
+        YG2.saves.claimedAchievementIds.Add(currentAchievement.id);
+        
+        // 3. Сохраняем
+        YG2.SaveProgress();
 
+        // 4. Обновляем UI
         UpdateButton();
+        
+        // 5. Сообщаем другим UI-элементам (например, CurrencyUI), что монеты изменились
+        FindAnyObjectByType<CurrencyUI>()?.Refresh();
     }
 }
 

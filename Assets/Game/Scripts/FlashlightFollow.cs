@@ -21,7 +21,7 @@ public class FlashlightFollow : MonoBehaviour
 
     void Update()
     {
-        if (mainCamera == null) return;
+        if (!mainCamera) return;
         if (Mouse.current == null) return; // мыши нет — выходим
 
         // 1. Позиция мыши (новый Input System)

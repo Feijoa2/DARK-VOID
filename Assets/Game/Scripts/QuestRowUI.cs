@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
+using System.Collections.Generic;
 
 public class QuestRowUI : MonoBehaviour
 {
@@ -21,7 +23,6 @@ public class QuestRowUI : MonoBehaviour
     [SerializeField] private Color claimedColor = new Color(0.3f, 0.3f, 0.3f);
 
     [SerializeField] private Color claimedTextColor = new Color(0.3f, 0.9f, 0.3f);
-
     [SerializeField] private int claimedFontSize = 32;
     [SerializeField] private int normalFontSize = 18;
 
@@ -44,14 +45,16 @@ public class QuestRowUI : MonoBehaviour
         if (currentQuest == null) return;
 
         bool isCompleted = currentQuest.currentAmount >= currentQuest.targetAmount;
-        bool isClaimed = PlayerPrefs.GetInt($"Quest_{currentQuest.id}_Claimed", 0) == 1;
+        
+        // ПРОВЕРКА ИЗ ОБЛАКА
+        bool isClaimed = YG2.saves.claimedQuestIds.Contains(currentQuest.id);
 
         if (isClaimed)
         {
             rewardButtonText.text = "✓";
-            rewardButtonText.color = claimedTextColor;  // ← зелёный текст
+            rewardButtonText.color = claimedTextColor;
             rewardButtonText.fontSize = claimedFontSize;
-            rewardButtonImage.color = claimedColor;     // тёмный фон
+            rewardButtonImage.color = claimedColor;
             rewardButton.interactable = false;
         }
         else if (isCompleted)
@@ -77,14 +80,18 @@ public class QuestRowUI : MonoBehaviour
         if (currentQuest == null) return;
         if (currentQuest.currentAmount < currentQuest.targetAmount) return;
 
-        // Проверяем, не забрано ли уже
-        if (PlayerPrefs.GetInt($"Quest_{currentQuest.id}_Claimed", 0) == 1) return;
+        if (YG2.saves.claimedQuestIds.Contains(currentQuest.id)) return;
 
-        int coins = PlayerPrefs.GetInt("Coins", 0);
-        PlayerPrefs.SetInt("Coins", coins + currentQuest.rewardCoins);
-        PlayerPrefs.SetInt($"Quest_{currentQuest.id}_Claimed", 1);
-        PlayerPrefs.Save();
+        // 1. Начисляем монеты
+        YG2.saves.coinsCollected += currentQuest.rewardCoins;
+        
+        // 2. Помечаем квест как выполненный
+        YG2.saves.claimedQuestIds.Add(currentQuest.id);
+        
+        // 3. Сохраняем
+        YG2.SaveProgress();
 
-        UpdateButton(); // ← сразу обновляем кнопку
+        UpdateButton();
+        FindAnyObjectByType<CurrencyUI>()?.Refresh();
     }
 }

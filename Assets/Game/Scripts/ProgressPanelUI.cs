@@ -17,6 +17,7 @@ public class ProgressPanelUI : MonoBehaviour
 
     void Start()
     {
+        // Небольшая задержка гарантирует, что все менеджеры уже инициализировались
         Invoke(nameof(RefreshUI), 0.1f);
     }
 
@@ -25,6 +26,9 @@ public class ProgressPanelUI : MonoBehaviour
         RefreshDailyReward();
         RefreshDailyQuests();
         RefreshAchievements();
+        
+        // Обновляем валюту на всякий случай при открытии панели
+        FindAnyObjectByType<CurrencyUI>()?.Refresh();
     }
 
     private void RefreshDailyReward()
@@ -33,6 +37,7 @@ public class ProgressPanelUI : MonoBehaviour
 
         bool canClaim = DailyRewardManager.Instance.CanClaimToday();
         if (dailyRewardButton != null) dailyRewardButton.interactable = canClaim;
+        
         if (dailyRewardText != null)
         {
             dailyRewardText.text = canClaim
@@ -43,17 +48,14 @@ public class ProgressPanelUI : MonoBehaviour
 
     private void RefreshDailyQuests()
     {
-        if (DailyQuestManager.Instance == null)
-        {
-            Debug.LogWarning("[ProgressPanelUI] DailyQuestManager не найден!");
-            return;
-        }
-
+        if (DailyQuestManager.Instance == null) return;
         if (questsContainer == null || questRowPrefab == null) return;
 
+        // Очистка старых
         foreach (Transform child in questsContainer)
             Destroy(child.gameObject);
 
+        // Создание новых
         foreach (var quest in DailyQuestManager.Instance.GetActiveQuests())
         {
             var row = Instantiate(questRowPrefab, questsContainer);
@@ -64,12 +66,7 @@ public class ProgressPanelUI : MonoBehaviour
 
     private void RefreshAchievements()
     {
-        if (AchievementManager.Instance == null)
-        {
-            Debug.LogWarning("[ProgressPanelUI] AchievementManager не найден!");
-            return;
-        }
-
+        if (AchievementManager.Instance == null) return;
         if (achievementsContainer == null || achievementRowPrefab == null) return;
 
         foreach (Transform child in achievementsContainer)
@@ -85,13 +82,25 @@ public class ProgressPanelUI : MonoBehaviour
 
     public void OnClaimDailyReward()
     {
-        if (DailyRewardManager.Instance == null) return;
+        Debug.Log("[ProgressPanelUI] Кнопка ежедневной награды нажата!");
+    
+        if (DailyRewardManager.Instance)
+        {
+            Debug.LogError("[ProgressPanelUI] DailyRewardManager НЕ НАЙДЕН!");
+            return;
+        }
 
+        Debug.Log("[ProgressPanelUI] Вызываем ClaimReward...");
         int amount = DailyRewardManager.Instance.ClaimReward();
+    
         if (amount > 0)
         {
-            Debug.Log($"[ProgressPanelUI] Получено {amount} монет!");
+            Debug.Log($"[ProgressPanelUI] ✅ Получено {amount} монет!");
             RefreshUI();
+        }
+        else
+        {
+            Debug.LogWarning("[ProgressPanelUI]  Награда не получена (уже забрана сегодня?)");
         }
     }
 }
