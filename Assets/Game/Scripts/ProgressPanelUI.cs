@@ -23,6 +23,8 @@ public class ProgressPanelUI : MonoBehaviour
 
     public void RefreshUI()
     {
+        Debug.Log("[ProgressPanelUI] 🔄 RefreshUI вызван!");
+        
         RefreshDailyReward();
         RefreshDailyQuests();
         RefreshAchievements();

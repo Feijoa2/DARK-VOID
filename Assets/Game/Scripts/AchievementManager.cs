@@ -24,8 +24,6 @@ public enum AchievementType
     FirstDeath
 }
 
-
-
 public class AchievementManager : MonoBehaviour
 {
     public static AchievementManager Instance;
@@ -37,10 +35,7 @@ public class AchievementManager : MonoBehaviour
         if (Instance == null) { Instance = this; DontDestroyOnLoad(gameObject); }
         else { Destroy(gameObject); return; }
 
-        // Инициализируем прогресс из облака, если его там нет
         LoadAchievementsFromSaves();
-
-        UpdateAchievementsInSaves();
     }
 
     void OnEnable()
@@ -85,42 +80,52 @@ public class AchievementManager : MonoBehaviour
                 if (ach.currentAmount >= ach.targetAmount)
                 {
                     ach.isCompleted = true;
-                    Debug.Log($"[AchievementManager] Достижение выполнено: {ach.title}");
+                    Debug.Log($"[AchievementManager] ✅ Достижение выполнено: {ach.title}");
                     
-                    // Отправляем в Яндекс только при выполнении
-                    #if Leaderboards_yg
-                    YG2.SetLeaderboard(ach.id, ach.currentAmount);
-                    #endif
+                    // ОТПРАВЛЯЕМ В ЛИДЕРБОРД ЯНДЕКС ИГР
+                    SendToLeaderboard(ach);
                     
-                    // Сохраняем прогресс достижений в облако
+                    // Сохраняем прогресс
                     UpdateAchievementsInSaves();
-                    
-                    // И вызываем глобальное сохранение, так как это важное событие
-                    YG2.SaveProgress(); 
+                    YG2.SaveProgress();
                 }
             }
         }
     }
-    
+
+    // Метод отправки в лидерборд
+    private void SendToLeaderboard(Achievement ach)
+    {
+        if (!YandexInitializer.IsSDKReady)
+        {
+            Debug.LogWarning("[AchievementManager] SDK не готов, лидерборд не отправлен");
+            return;
+        }
+
+        // ach.id должен совпадать с техническим именем лидерборда в консоли Яндекса
+        YG2.SetLeaderboard(ach.id, ach.currentAmount);
+        Debug.Log($"[AchievementManager] 📤 Отправлено в лидерборд: {ach.id} = {ach.currentAmount}");
+    }
+
     private void UpdateAchievementsInSaves()
     {
         YG2.saves.achievementIds.Clear();
         YG2.saves.achievementProgress.Clear();
-    
+        
         foreach (var ach in achievements)
         {
             YG2.saves.achievementIds.Add(ach.id);
             YG2.saves.achievementProgress.Add(ach.currentAmount);
         }
     }
-    
+
     private void LoadAchievementsFromSaves()
     {
         for (int i = 0; i < YG2.saves.achievementIds.Count; i++)
         {
             string id = YG2.saves.achievementIds[i];
             int progress = YG2.saves.achievementProgress[i];
-        
+            
             foreach (var ach in achievements)
             {
                 if (ach.id == id)
@@ -132,7 +137,6 @@ public class AchievementManager : MonoBehaviour
             }
         }
     }
-    
 
     public List<Achievement> GetAchievements() => achievements;
 }
