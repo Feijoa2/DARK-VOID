@@ -45,15 +45,23 @@ public class GameManager : MonoBehaviour
     {
         if (isGameOver) return;
         isGameOver = true;
-        
+    
+        Debug.Log("[GameManager] 💀 GAME OVER! Показываю экран смерти...");
+        Debug.Log($"[GameManager] deathScreen = {deathScreen}");
+    
         YG2.SaveProgress();
-        
         GameEvents.PlayerDied(); 
         Time.timeScale = 0f;
-        if (deathScreen != null) deathScreen.SetActive(true);
-
-        // ОПЦИОНАЛЬНО: Показать рекламу за вознаграждение для возрождения
-        // YandexAdsManager.Instance.ShowRewardedAd("Revive", () => { RevivePlayer(); });
+    
+        if (deathScreen != null)
+        {
+            deathScreen.SetActive(true);
+            Debug.Log("[GameManager] ✅ Экран смерти активирован!");
+        }
+        else
+        {
+            Debug.LogError("[GameManager] ❌ deathScreen НЕ НАЗНАЧЕН в Inspector!");
+        }
     }
 
     public void RestartLevel()
