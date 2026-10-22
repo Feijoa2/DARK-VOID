@@ -149,6 +149,7 @@ public class EnemyAI : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        
         if (isDying || isStunned) return;
         if (other.CompareTag(playerTag))
             GameManager.Instance.GameOver();

@@ -15,19 +15,11 @@ public class Achievement
     public AchievementType type;
 }
 
-public enum AchievementType
-{
-    FirstKill,
-    KillEnemies20,
-    FirstLevel,
-    CompleteLevels10,
-    FirstDeath
-}
+public enum AchievementType { FirstKill, KillEnemies20, FirstLevel, CompleteLevels10, FirstDeath }
 
 public class AchievementManager : MonoBehaviour
 {
     public static AchievementManager Instance;
-
     [SerializeField] private List<Achievement> achievements = new List<Achievement>();
 
     void Awake()
@@ -52,22 +44,9 @@ public class AchievementManager : MonoBehaviour
         GameEvents.OnPlayerDied -= HandlePlayerDied;
     }
 
-    private void HandleEnemyKilled()
-    {
-        UpdateProgress(AchievementType.FirstKill, 1);
-        UpdateProgress(AchievementType.KillEnemies20, 1);
-    }
-
-    private void HandleLevelCompleted(int levelId)
-    {
-        UpdateProgress(AchievementType.FirstLevel, 1);
-        UpdateProgress(AchievementType.CompleteLevels10, 1);
-    }
-
-    private void HandlePlayerDied()
-    {
-        UpdateProgress(AchievementType.FirstDeath, 1);
-    }
+    private void HandleEnemyKilled() { UpdateProgress(AchievementType.FirstKill, 1); UpdateProgress(AchievementType.KillEnemies20, 1); }
+    private void HandleLevelCompleted(int levelId) { UpdateProgress(AchievementType.FirstLevel, 1); UpdateProgress(AchievementType.CompleteLevels10, 1); }
+    private void HandlePlayerDied() { UpdateProgress(AchievementType.FirstDeath, 1); }
 
     private void UpdateProgress(AchievementType type, int amount)
     {
@@ -76,16 +55,11 @@ public class AchievementManager : MonoBehaviour
             if (ach.type == type && !ach.isCompleted)
             {
                 ach.currentAmount += amount;
-
                 if (ach.currentAmount >= ach.targetAmount)
                 {
                     ach.isCompleted = true;
-                    Debug.Log($"[AchievementManager] ✅ Достижение выполнено: {ach.title}");
-                    
-                    // ОТПРАВЛЯЕМ В ЛИДЕРБОРД ЯНДЕКС ИГР
+                    Debug.Log($"[AchievementManager] ✅ Выполнено: {ach.title}");
                     SendToLeaderboard(ach);
-                    
-                    // Сохраняем прогресс
                     UpdateAchievementsInSaves();
                     YG2.SaveProgress();
                 }
@@ -93,22 +67,17 @@ public class AchievementManager : MonoBehaviour
         }
     }
 
-    // Метод отправки в лидерборд
     private void SendToLeaderboard(Achievement ach)
     {
-        if (!YandexInitializer.IsSDKReady)
-        {
-            Debug.LogWarning("[AchievementManager] SDK не готов, лидерборд не отправлен");
-            return;
-        }
-
-        // ach.id должен совпадать с техническим именем лидерборда в консоли Яндекса
+        if (!YandexInitializer.IsSDKReady) return;
         YG2.SetLeaderboard(ach.id, ach.currentAmount);
-        Debug.Log($"[AchievementManager] 📤 Отправлено в лидерборд: {ach.id} = {ach.currentAmount}");
     }
 
     private void UpdateAchievementsInSaves()
     {
+        if (YG2.saves.achievementIds == null) YG2.saves.achievementIds = new List<string>();
+        if (YG2.saves.achievementProgress == null) YG2.saves.achievementProgress = new List<int>();
+
         YG2.saves.achievementIds.Clear();
         YG2.saves.achievementProgress.Clear();
         
@@ -121,6 +90,9 @@ public class AchievementManager : MonoBehaviour
 
     private void LoadAchievementsFromSaves()
     {
+        if (YG2.saves.achievementIds == null) YG2.saves.achievementIds = new List<string>();
+        if (YG2.saves.achievementProgress == null) YG2.saves.achievementProgress = new List<int>();
+
         for (int i = 0; i < YG2.saves.achievementIds.Count; i++)
         {
             string id = YG2.saves.achievementIds[i];

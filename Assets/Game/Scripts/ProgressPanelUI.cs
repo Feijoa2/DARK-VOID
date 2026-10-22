@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 
 public class ProgressPanelUI : MonoBehaviour
 {
@@ -17,19 +18,17 @@ public class ProgressPanelUI : MonoBehaviour
 
     void Start()
     {
-        // Небольшая задержка гарантирует, что все менеджеры уже инициализировались
-        Invoke(nameof(RefreshUI), 0.1f);
+        Invoke(nameof(RefreshUI), 0.2f);
     }
 
     public void RefreshUI()
     {
-        Debug.Log("[ProgressPanelUI] 🔄 RefreshUI вызван!");
+        Debug.Log("[ProgressPanelUI] 🔄 RefreshUI ВЫЗВАН!");
         
         RefreshDailyReward();
         RefreshDailyQuests();
         RefreshAchievements();
         
-        // Обновляем валюту на всякий случай при открытии панели
         FindAnyObjectByType<CurrencyUI>()?.Refresh();
     }
 
@@ -53,11 +52,8 @@ public class ProgressPanelUI : MonoBehaviour
         if (DailyQuestManager.Instance == null) return;
         if (questsContainer == null || questRowPrefab == null) return;
 
-        // Очистка старых
-        foreach (Transform child in questsContainer)
-            Destroy(child.gameObject);
+        foreach (Transform child in questsContainer) Destroy(child.gameObject);
 
-        // Создание новых
         foreach (var quest in DailyQuestManager.Instance.GetActiveQuests())
         {
             var row = Instantiate(questRowPrefab, questsContainer);
@@ -68,41 +64,47 @@ public class ProgressPanelUI : MonoBehaviour
 
     private void RefreshAchievements()
     {
-        if (AchievementManager.Instance == null) return;
-        if (achievementsContainer == null || achievementRowPrefab == null) return;
+        Debug.Log("[ProgressPanelUI] 🏆 Начало RefreshAchievements");
+        
+        if (AchievementManager.Instance == null) { Debug.LogError("❌ AchievementManager.Instance == null"); return; }
+        if (achievementsContainer == null) { Debug.LogError("❌ achievementsContainer == null (проверь Inspector!)"); return; }
+        if (achievementRowPrefab == null) { Debug.LogError("❌ achievementRowPrefab == null (проверь Inspector!)"); return; }
 
-        foreach (Transform child in achievementsContainer)
-            Destroy(child.gameObject);
+        foreach (Transform child in achievementsContainer) Destroy(child.gameObject);
 
+        int count = 0;
         foreach (var ach in AchievementManager.Instance.GetAchievements())
         {
             var row = Instantiate(achievementRowPrefab, achievementsContainer);
             var ui = row.GetComponent<AchievementRowUI>();
-            if (ui != null) ui.Setup(ach);
+            if (ui != null) 
+            {
+                ui.Setup(ach);
+                count++;
+            }
+            else
+            {
+                Debug.LogError("❌ На префабе строки НЕТ компонента AchievementRowUI!");
+            }
         }
+        Debug.Log($"[ProgressPanelUI] ✅ Создано строк достижений: {count}");
     }
 
     public void OnClaimDailyReward()
     {
         Debug.Log("[ProgressPanelUI] Кнопка ежедневной награды нажата!");
     
-        if (DailyRewardManager.Instance)
+        if (DailyRewardManager.Instance == null) 
         {
             Debug.LogError("[ProgressPanelUI] DailyRewardManager НЕ НАЙДЕН!");
             return;
         }
 
-        Debug.Log("[ProgressPanelUI] Вызываем ClaimReward...");
         int amount = DailyRewardManager.Instance.ClaimReward();
-    
         if (amount > 0)
         {
             Debug.Log($"[ProgressPanelUI] ✅ Получено {amount} монет!");
             RefreshUI();
-        }
-        else
-        {
-            Debug.LogWarning("[ProgressPanelUI]  Награда не получена (уже забрана сегодня?)");
         }
     }
 }
