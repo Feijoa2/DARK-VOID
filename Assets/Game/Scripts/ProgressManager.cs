@@ -37,34 +37,45 @@ public class ProgressManager : MonoBehaviour
         GameEvents.OnCoinsCollected -= HandleCoinsCollected;
     }
 
-    private void HandleEnemyRepelled() => YG2.saves.enemiesRepelled++;
-    private void HandleEnemyKilled() => YG2.saves.enemiesKilled++;
-    private void HandlePlayerDied() => YG2.saves.deathsCount++;
-    
+    private void HandleEnemyRepelled()
+    {
+        // YG2.saves.enemiesRepelled++; 
+    }
+
+    private void HandleEnemyKilled()
+    {
+        // YG2.saves.enemiesKilled++; 
+    }
+
+    private void HandlePlayerDied()
+    {
+        // YG2.saves.deathsCount++; 
+    }
+
     private void HandleLevelCompleted(int levelId)
     {
-        YG2.saves.levelsCompleted++;
-        YG2.SaveProgress(); 
+        /*YG2.saves.levelsCompleted++;
+        YG2.SaveProgress(); */
     }
 
     private void HandleCoinsCollected(int amount)
     {
-        YG2.saves.coinsCollected += amount;
+        //YG2.saves.coinsCollected += amount;
     }
 
-    public int EnemiesRepelled => YG2.saves.enemiesRepelled;
-    public int EnemiesKilled => YG2.saves.enemiesKilled;
-    public int LevelsCompleted => YG2.saves.levelsCompleted;
-    public int CoinsCollected => YG2.saves.coinsCollected;
-    public int DeathsCount => YG2.saves.deathsCount;
+    //public int EnemiesRepelled => YG2.saves.enemiesRepelled;
+    //public int EnemiesKilled => YG2.saves.enemiesKilled;
+    //public int LevelsCompleted => YG2.saves.levelsCompleted;
+    //public int CoinsCollected => YG2.saves.coinsCollected;
+    //public int DeathsCount => YG2.saves.deathsCount;
 
     public void ResetProgress()
     {
-        YG2.saves.enemiesRepelled = 0;
+        /*YG2.saves.enemiesRepelled = 0;
         YG2.saves.enemiesKilled = 0;
         YG2.saves.levelsCompleted = 0;
         YG2.saves.coinsCollected = 0;
         YG2.saves.deathsCount = 0;
-        YG2.SaveProgress(); // При сбросе сохраняем обязательно
+        YG2.SaveProgress(); // При сбросе сохраняем обязательно*/
     }
 }

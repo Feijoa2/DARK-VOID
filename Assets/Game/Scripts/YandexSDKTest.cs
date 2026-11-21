@@ -5,12 +5,12 @@ using YG;
 public class YandexSDKTest : MonoBehaviour
 {
     private Keyboard keyboard;
-    
+
     void Start()
     {
         // Подписываемся на инициализацию SDK
         YG2.onGetSDKData += OnSDKReady;
-        
+
         // Если SDK уже готов
         if (YG2.isSDKEnabled)
         {
@@ -21,7 +21,7 @@ public class YandexSDKTest : MonoBehaviour
             Debug.Log("⏳ Ждём инициализацию SDK...");
         }
     }
-    
+
     void Awake()
     {
         keyboard = Keyboard.current;
@@ -32,22 +32,22 @@ public class YandexSDKTest : MonoBehaviour
         Debug.Log("═══════════════════════════════════════");
         Debug.Log("✅ SDK ИНИЦИАЛИЗИРОВАН!");
         Debug.Log("═══════════════════════════════════════");
-        
+
         // Данные игрока
         Debug.Log($"👤 Имя игрока: {YG2.player.name}");
         Debug.Log($"🆔 ID игрока: {YG2.player.id}");
         Debug.Log($" Авторизован: {YG2.player.auth}");
-        
+
         // Платформа
         Debug.Log($"🎮 Платформа: {YG2.platform}");
         Debug.Log($" SDK включён: {YG2.isSDKEnabled}");
         Debug.Log($" Первая сессия: {YG2.isFirstGameSession}");
-        
+
         // Сохранения
         Debug.Log($"💰 Монеты: {YG2.saves.coinsCollected}");
         Debug.Log($"💎 Кристаллы: {YG2.saves.crystalsCollected}");
         Debug.Log($"📅 Последняя награда: {YG2.saves.lastDailyRewardDate}");
-        
+
         Debug.Log("═══════════════════════════════════════");
     }
 
@@ -55,13 +55,13 @@ public class YandexSDKTest : MonoBehaviour
     public void TestSave()
     {
         Debug.Log("🧪 ТЕСТ СОХРАНЕНИЯ...");
-        
+
         YG2.saves.coinsCollected += 100;
         Debug.Log($"➕ Добавили 100 монет. Теперь: {YG2.saves.coinsCollected}");
-        
+
         YG2.SaveProgress();
         Debug.Log(" Сохранено!");
-        
+
         FindAnyObjectByType<CurrencyUI>()?.Refresh();
     }
 
@@ -90,21 +90,21 @@ public class YandexSDKTest : MonoBehaviour
         YG2.SetLeaderboard("testLeaderboard", 100);
         Debug.Log(" Рекорд отправлен: 100");
     }
-    
+
     public void CheckUI()
     {
         Debug.Log("=== ПРОВЕРКА UI ===");
-    
+
         var currencyUI = FindObjectOfType<CurrencyUI>();
         if (currencyUI == null)
         {
             Debug.LogError("❌ CurrencyUI НЕ НАЙДЕН на сцене!");
             return;
         }
-    
+
         Debug.Log($"✅ CurrencyUI найден");
         Debug.Log($"💰 Монеты в saves: {YG2.saves.coinsCollected}");
-    
+
         currencyUI.Refresh();
         Debug.Log("🔄 Вызван Refresh()");
     }

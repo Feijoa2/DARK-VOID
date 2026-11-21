@@ -80,7 +80,7 @@ public class AchievementManager : MonoBehaviour
 
         YG2.saves.achievementIds.Clear();
         YG2.saves.achievementProgress.Clear();
-        
+
         foreach (var ach in achievements)
         {
             YG2.saves.achievementIds.Add(ach.id);
@@ -97,7 +97,7 @@ public class AchievementManager : MonoBehaviour
         {
             string id = YG2.saves.achievementIds[i];
             int progress = YG2.saves.achievementProgress[i];
-            
+
             foreach (var ach in achievements)
             {
                 if (ach.id == id)

@@ -23,7 +23,7 @@ public class DailyRewardManager : MonoBehaviour
             return 0;
         }
 
-        if (!CanClaimToday()) 
+        if (!CanClaimToday())
         {
             Debug.LogWarning("[DailyRewardManager] Награду уже забрали сегодня!");
             return 0;
@@ -32,7 +32,7 @@ public class DailyRewardManager : MonoBehaviour
         string today = System.DateTime.Now.ToString("yyyy-MM-dd");
         YG2.saves.lastDailyRewardDate = today;
         YG2.saves.coinsCollected += dailyRewardAmount;
-    
+
         Debug.Log($"[DailyRewardManager] Сохраняем {dailyRewardAmount} монет. Всего: {YG2.saves.coinsCollected}");
         YG2.SaveProgress();
 
@@ -44,7 +44,7 @@ public class DailyRewardManager : MonoBehaviour
         string lastClaim = YG2.saves.lastDailyRewardDate;
         string today = DateTime.Now.ToString("yyyy-MM-dd");
         bool canClaim = lastClaim != today;
-    
+
         Debug.Log($"[DailyRewardManager] CanClaimToday: lastClaim='{lastClaim}', today='{today}', result={canClaim}");
         return canClaim;
     }

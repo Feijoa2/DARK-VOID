@@ -24,11 +24,11 @@ public class ProgressPanelUI : MonoBehaviour
     public void RefreshUI()
     {
         Debug.Log("[ProgressPanelUI] 🔄 RefreshUI ВЫЗВАН!");
-        
+
         RefreshDailyReward();
         RefreshDailyQuests();
         RefreshAchievements();
-        
+
         FindAnyObjectByType<CurrencyUI>()?.Refresh();
     }
 
@@ -38,7 +38,7 @@ public class ProgressPanelUI : MonoBehaviour
 
         bool canClaim = DailyRewardManager.Instance.CanClaimToday();
         if (dailyRewardButton != null) dailyRewardButton.interactable = canClaim;
-        
+
         if (dailyRewardText != null)
         {
             dailyRewardText.text = canClaim
@@ -65,7 +65,7 @@ public class ProgressPanelUI : MonoBehaviour
     private void RefreshAchievements()
     {
         Debug.Log("[ProgressPanelUI] 🏆 Начало RefreshAchievements");
-        
+
         if (AchievementManager.Instance == null) { Debug.LogError("❌ AchievementManager.Instance == null"); return; }
         if (achievementsContainer == null) { Debug.LogError("❌ achievementsContainer == null (проверь Inspector!)"); return; }
         if (achievementRowPrefab == null) { Debug.LogError("❌ achievementRowPrefab == null (проверь Inspector!)"); return; }
@@ -77,7 +77,7 @@ public class ProgressPanelUI : MonoBehaviour
         {
             var row = Instantiate(achievementRowPrefab, achievementsContainer);
             var ui = row.GetComponent<AchievementRowUI>();
-            if (ui != null) 
+            if (ui != null)
             {
                 ui.Setup(ach);
                 count++;
@@ -93,8 +93,8 @@ public class ProgressPanelUI : MonoBehaviour
     public void OnClaimDailyReward()
     {
         Debug.Log("[ProgressPanelUI] Кнопка ежедневной награды нажата!");
-    
-        if (DailyRewardManager.Instance == null) 
+
+        if (DailyRewardManager.Instance == null)
         {
             Debug.LogError("[ProgressPanelUI] DailyRewardManager НЕ НАЙДЕН!");
             return;

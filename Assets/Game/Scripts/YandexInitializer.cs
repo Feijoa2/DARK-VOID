@@ -5,7 +5,7 @@ public class YandexInitializer : MonoBehaviour
 {
     public static bool IsSDKReady { get; private set; } = false;
 
-    void Awake()
+    /*void Awake()
     {
         // Подписываемся на событие готовности SDK
         YG2.onGetSDKData += OnSDKInitialized;
@@ -15,7 +15,7 @@ public class YandexInitializer : MonoBehaviour
         {
             OnSDKInitialized();
         }
-    }
+    }*/
 
     private void OnSDKInitialized()
     {
@@ -23,8 +23,8 @@ public class YandexInitializer : MonoBehaviour
         IsSDKReady = true;
     }
 
-    void OnDestroy()
+    /*void OnDestroy()
     {
         YG2.onGetSDKData -= OnSDKInitialized;
-    }
+    } */
 }

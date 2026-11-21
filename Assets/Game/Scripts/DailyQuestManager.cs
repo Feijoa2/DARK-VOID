@@ -43,7 +43,7 @@ public class DailyQuestManager : MonoBehaviour
             // Если день тот же, просто генерируем их снова. 
             // (В идеале прогресс нужно хранить в SavesYG, но для отображения этого достаточно, 
             // так как GameEvents будут обновлять их в реальном времени)
-            GenerateNewQuests(); 
+            GenerateNewQuests();
         }
     }
 
